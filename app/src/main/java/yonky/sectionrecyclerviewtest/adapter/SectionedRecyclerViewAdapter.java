@@ -461,7 +461,6 @@ public OnChildClickListener onChildClickListener;
      * 为分组footer创建一个类型为F的ViewHolder
      *
      * @param parent
-     * @param viewType
      * @return
      */
     protected abstract F onCreateSectionFooterViewHolder(ViewGroup parent);
@@ -470,7 +469,6 @@ public OnChildClickListener onChildClickListener;
      * 为分组内容创建一个类型为VH的ViewHolder
      *
      * @param parent
-     * @param viewType
      * @return
      */
     protected abstract VH onCreateItemViewHolder(ViewGroup parent);
@@ -479,7 +477,6 @@ public OnChildClickListener onChildClickListener;
      * 为整个列表创建一个类型为RH的ViewHolder
      *
      * @param parent
-     * @param viewType
      * @return
      */
     protected abstract RH onCreateHeaderViewHolder(ViewGroup parent);
@@ -488,7 +485,6 @@ public OnChildClickListener onChildClickListener;
      * 为整个列表创建一个类型为FO的ViewHolder
      *
      * @param parent
-     * @param viewType
      * @return
      */
     protected abstract FO onCreateFooterViewHolder(ViewGroup parent);
@@ -557,5 +553,10 @@ public OnChildClickListener onChildClickListener;
     }
 
     protected abstract void onBindFooterOtherviewHolder(FO holder);
+
+    public void changeMoreStatus(int status){
+        load_more_status=status;
+        notifyDataSetChanged();
+    }
 
 }
