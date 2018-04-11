@@ -5,12 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.WindowManager;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import yonky.sectionrecyclerviewtest.adapter.TestAdapter;
 import yonky.sectionrecyclerviewtest.bean.TestEntity;
 import yonky.sectionrecyclerviewtest.mvp.Module;
 import yonky.sectionrecyclerviewtest.mvp.TestPresenter;
@@ -25,7 +27,9 @@ public class MainActivity extends AppCompatActivity
     @BindView(R.id.rv)
     RecyclerView rv;
 
-//    private TestAdapter mAdapter;
+
+
+    private TestAdapter mAdapter;
 //    private GridLayoutManager mGridLayoutManager;
 //    private SectionedGridDivider mDivider;
 //    private List<TestEntity.BodyBean.EListBean> mDatas = new ArrayList<>();
@@ -41,6 +45,7 @@ public class MainActivity extends AppCompatActivity
         ButterKnife.bind(this);
 //        mTestPresenter = new TestPresenter(this);
 //        initAdapter();
+
     }
 //
 //    @Override
