@@ -22,6 +22,7 @@ public class DatasUtil {
         bean.setPicture(url1);
         bean.setContent("炎热的夏天， 森林里有妖怪");
         bean.setBrowser("200");
+        bean.setTime(TimeUtil.getTime());
         bean.setUserName("Darling");
         urls.add(url2);
         urls.add(url2);
